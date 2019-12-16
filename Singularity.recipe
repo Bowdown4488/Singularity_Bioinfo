@@ -1,0 +1,23 @@
+Bootstrap:docker
+From:ubuntu:18.04
+
+%files
+	lofreq
+	# VirVarSeq.tar.gz
+	runscript.sh
+
+%post
+	echo "Updating and installing dependencies..."
+	apt-get -y update
+	apt-get -y install python g++ libz-dev bowtie2 samtools last-align
+	# apt-get -y install wget bwa r-base gfortran perl cpanminus
+	# tar xvfz VirVarSeq.tar.gz
+	# cd VirVarSeq
+	# R CMD INSTALL "R/packages/rmgt_0.9.001.tar.gz"
+
+%environment
+	# export PERL5LIB=/VirVarSeq/lib
+	# export R_LIBS_USER=/VirVarSeq/R/lib
+
+%runscript
+	sh runscript.sh $1 $2 $3
