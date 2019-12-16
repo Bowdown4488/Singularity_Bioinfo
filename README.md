@@ -1,12 +1,9 @@
 # Singularity_Bioinfo
 
 Included in this version of the container is the Alignment tools (Bowtie2 and Last) and as of now
-only lofreq is currently functioning in this container for Variant Calling.
+only Lofreq is the only currently functioning in the version of this container for Variant Calling.
 
-User Input Example:
-<name> = bioinfo
-<bowtie2> = bowtie2
-<last> = last
+After cloning this repository go the folder where the files are and follow the steps bellow: 
 
 How to install singularity:
 ```
